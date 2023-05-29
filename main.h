@@ -25,4 +25,5 @@ int percent_printer(va_list);
 int print_unsgined_number(unsigned int n);
 int number_printer(va_list);
 int int_printer(va_list);
+int printf_bin(va_list val);
 #endif

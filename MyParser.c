@@ -9,6 +9,7 @@ int my_parser(const char *format, va_list args)
         {"%", percent_printer},
         {"d", number_printer},
         {"i", number_printer},
+        {"b", printf_bin},
         {NULL, NULL}
     }; 
 
