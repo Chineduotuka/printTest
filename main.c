@@ -11,9 +11,13 @@ int main(void)
 	void *addr;
 
 	_printf("%b\n", 98);
-	_printf("%X\n", 100000);
+	_printf("%o\n", 205);
+	_printf("%o\n", 100000);
+	printf("%o\n", 205);
+	printf("%o\n", 100000);
+	_printf("%X\n", 205);
 	_printf("%x\n", 100000);
-	printf("%X\n", 100000);
+	printf("%X\n", 205);
 	printf("%x\n", 100000);
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
