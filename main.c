@@ -10,6 +10,12 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
+	_printf("%R\n", "HELLO7");
+	_printf("%R\n", "");
+	_printf("%R\n", NULL);
+
+
+	_printf("%r\n", "best");
 	_printf("%b\n", 98);
 	_printf("%o\n", 205);
 	_printf("%o\n", 100000);

@@ -29,4 +29,6 @@ int printf_bin(va_list val);
 int printf_hex_upper(va_list val);
 int printf_hex_lower(va_list val);
 int printf_octal(va_list val);
+int printf_ro13(va_list val);
+int print_rev_string(va_list val);
 #endif

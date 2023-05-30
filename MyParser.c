@@ -13,6 +13,8 @@ int my_parser(const char *format, va_list args)
         {"X", printf_hex_upper},
         {"x", printf_hex_lower},
         {"o", printf_octal},
+        {"R", printf_ro13},
+        {"r", print_rev_string},
         {NULL, NULL}
     }; 
 
