@@ -10,7 +10,11 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
-	_printf("%b\n", 46);
+	_printf("%b\n", 98);
+	_printf("%X\n", 100000);
+	_printf("%x\n", 100000);
+	printf("%X\n", 100000);
+	printf("%x\n", 100000);
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;

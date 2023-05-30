@@ -93,10 +93,10 @@ int percent_printer(__attribute__((unused)) va_list args)
 
 int printf_bin(va_list val)
 {
-	int output_index = 0;
+	unsigned int output_index = 0;
 	unsigned int num = va_arg(val, unsigned int);
 	char *buffer;
-	int bufferSize = BUFFER_SIZE;
+	unsigned int bufferSize = BUFFER_SIZE;
 	buffer = (char *)malloc((bufferSize +1) * sizeof(char));
 
 	while (num>0)
@@ -126,7 +126,7 @@ int printf_bin(va_list val)
 		return (-1);
 	}
 
-	int temp_count = output_index - 1;
+	unsigned int temp_count = output_index - 1;
 
 	buffer[output_index] = '\0';
 	while(temp_count >= 0 && buffer[temp_count] != '\0')
@@ -136,7 +136,7 @@ int printf_bin(va_list val)
 	}
 
 	free(buffer);
-	return (output_index);
+	return(output_index);
 }
 
 int _putchar(char c)
