@@ -13,8 +13,6 @@ int main(void)
 	_printf("%R\n", "HELLO7");
 	_printf("%R\n", "");
 	_printf("%R\n", NULL);
-
-
 	_printf("%r\n", "best");
 	_printf("%b\n", 98);
 	_printf("%o\n", 205);
@@ -29,12 +27,13 @@ int main(void)
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;
+	int *x = 42;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
-	_printf("Unsigned:[%u]\n", ui);
-	printf("Unsigned:[%u]\n", ui);
+	_printf("Unsigned:[%u]\n", -800);
+	printf("Unsigned:[%u]\n", -800);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
@@ -45,6 +44,9 @@ int main(void)
 	printf("String:[%s]\n", "I am a string !");
 	_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
+	_printf("Address:[%p]\n", &x);
+	printf("Address:[%p]\n", &x);
+
 	len = _printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);

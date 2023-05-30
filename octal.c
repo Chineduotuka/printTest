@@ -1,9 +1,5 @@
 #include "main.h"
 
-#define BUFFER_SIZE 10
-
-
-
 int printf_octal(va_list val)
 {
 	char *oct_array;

@@ -1,8 +1,6 @@
 #include "main.h"
 #include <unistd.h>
 
-#define BUFFER_SIZE 10
-
 
 int number_printer(va_list args)
 {
@@ -33,29 +31,6 @@ int number_printer(va_list args)
 		num_copy %= modulu_checker;
 		modulu_checker /= 10; 
     }
-	return (count);
-}
-
-int print_unsgined_number(unsigned int num)
-{
-	int modulu_checker = 1;
-	int count = 0;
-	int num_copy;
-
-	num_copy = num;
-
-    while ((num_copy/modulu_checker) > 9)
-    {
-       modulu_checker *= 10;
-    };
-
-    while (modulu_checker != 0)
-    {
-       count += _putchar('0' +( num_copy / modulu_checker));
-		num_copy %= modulu_checker;
-		modulu_checker /= 10;
-    }
-
 	return (count);
 }
 

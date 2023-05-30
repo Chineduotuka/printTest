@@ -15,6 +15,8 @@ int my_parser(const char *format, va_list args)
         {"o", printf_octal},
         {"R", printf_ro13},
         {"r", print_rev_string},
+        {"p", print_addr},
+        {"u", print_unsigned_number},
         {NULL, NULL}
     }; 
 
@@ -31,6 +33,7 @@ int my_parser(const char *format, va_list args)
         
         if(format[i] == '%')
         {
+            j = 0;
             while(check_type_list[j].id != NULL)
             {
                 if(format[ i + 1] == check_type_list[j].id[0])

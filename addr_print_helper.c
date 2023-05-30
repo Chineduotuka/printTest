@@ -1,23 +1,15 @@
 #include "main.h"
 
-int printf_hex_upper(va_list val)
+int my_func(unsigned long address_lon_val)
 {
 	char *hex_array;
-	unsigned int num = va_arg(val, unsigned int);
 	int return_count = 0;
 	int temp_count;
 	char hex_mapper_upper[] = "0123456789ABCDEF";
 	int hex_array_size = BUFFER_SIZE;
 	hex_array = (char *)malloc((hex_array_size +1) * sizeof(char));
-
-	if(num < 0)
-	{
-		hex_array[0] = '-';
-		return_count++;
-		num *= -1;
-	}
 	
-	while (num>0)
+	while (address_lon_val>0)
 	{		
 		if(return_count == hex_array_size)
 		{
@@ -30,9 +22,9 @@ int printf_hex_upper(va_list val)
 			}
 		}
 
-		int c = num % 16;
+		int c = address_lon_val % 16;
 		hex_array[return_count] = hex_mapper_upper[c];
-		num/=16;
+		address_lon_val/=16;
 		return_count++;		
 	}
 

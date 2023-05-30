@@ -13,11 +13,13 @@ int print_rev_string(va_list val)
     }
 
     counter = input_string_len - 1;
-    while (counter >= 0)
+
+    while (counter >= 0 && input_string[counter != '\0'])
     {
         _putchar(input_string[counter]);
         counter--;
     }
+    _putchar('\n');
 
     return counter;
     

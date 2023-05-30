@@ -1,13 +1,9 @@
 #include "main.h"
 
-#define BUFFER_SIZE 10
-
-
-
 int printf_hex_lower(va_list val)
 {
 	char *hex_array;
-	unsigned int num = va_arg(val, unsigned int);
+	unsigned long num = va_arg(val, unsigned long);
 	int return_count = 0;
 	int temp_count;
 	char hex_mapper_lower[] = "0123456789abcdef";
